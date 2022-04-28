@@ -3,7 +3,7 @@ import './style.css'
 // import './activities/06-clases-a.ts';
 //import './activities/06-clases-b.ts';
 //import './activities/06-clases-c.ts';
-import './activities/07-tarea-responsabilidad-b.ts';
+import './clean-code/07-tarea-responsabilidad-b.ts';
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
