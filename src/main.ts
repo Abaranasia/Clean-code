@@ -4,7 +4,8 @@ import './style.css'
 //import './activities/06-clases-b.ts';
 //import './activities/06-clases-c.ts';
 //import './clean-code/07-tarea-responsabilidad-b.ts';
-import './solid/01-SRP-b.ts';
+//import './solid/01-SRP-b.ts';
+import './solid/02-open-close-a';
 
 
 const app = document.querySelector<HTMLDivElement>('#app')!
