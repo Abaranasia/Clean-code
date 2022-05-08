@@ -16,9 +16,22 @@ import { HttpClient } from './02-open-close-c';
     const photos = await photosService.getPhotos();
     
     
-    console.log({ todos, posts, photos });
+   // console.log({ todos, posts, photos });
     
-    const allService = new AllService(httpClient);
+   /**************************************************************** */
+
+    const urlTodo = 'https://jsonplaceholder.typicode.com/todos/';
+    const urlPost = 'https://jsonplaceholder.typicode.com/posts';
+    const urlphotos = 'https://jsonplaceholder.typicode.com/photos';
+
+    const todoServiceAll = new AllService(httpClient, urlTodo);
+    const postServiceAll = new AllService(httpClient, urlPost);
+    const photosServiceAll = new AllService(httpClient, urlphotos);
     
+    const todosAll = await todoServiceAll.getItems();
+    const postsAll = await postServiceAll.getItems();
+    const photosAll = await photosServiceAll.getItems();
+
+    console.log({ todosAll, postsAll, photosAll });
 
 })();
