@@ -6,6 +6,7 @@ import './style.css'
 //import './clean-code/07-tarea-responsabilidad-b.ts';
 //import './solid/01-SRP-b.ts';
 import './solid/02-open-close-a';
+import './solid/03-liskov-a';
 
 
 const app = document.querySelector<HTMLDivElement>('#app')!
