@@ -12,18 +12,20 @@ export class PostService {
 
     private posts: Post[] = [];
 
-    constructor() {}
+    constructor(private postProvider: JsonDataBaseService) {} // For dependency inversion we do a dep injection in the constructor
 
-    async getPosts() {
-        const jsonDB = new LocalDataBaseService();
-        this.posts = await jsonDB.getFakePosts();
+    // async getPosts() {
+    //     const jsonDB = new LocalDataBaseService();
+    //     this.posts = await jsonDB.getFakePosts();
 
-        return this.posts;
-    }
+    //     return this.posts;
+    // }
 
-    async getJsonPosts() { // Now reading from the JSON
-    const jsonDB = new JsonDataBaseService();
-    this.posts = await jsonDB.getPosts();
+    async getPosts() { // Now reading from the JSON
+    //const jsonDB = new JsonDataBaseService();
+    //this.posts = await jsonDB.getPosts();
+    this.posts = await this.postProvider.getPosts();
+
 
     return this.posts;
     }
